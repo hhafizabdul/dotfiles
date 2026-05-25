@@ -39,10 +39,10 @@ alias cdx2="codex2 --yolo"
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
 
 # Bun
-export PATH="/home/abdul891/.cache/.bun/bin:$PATH"
+export PATH="$HOME/.cache/.bun/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/home/abdul891/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -186,8 +186,8 @@ ag2kill() { __antigravity_kill_profile "$HOME/.antigravity-profile-2"; }
 
 # ── Antigravity CLI ───────────────────────────────────────────────────────────
 
-alias agy="/home/abdul891/.local/bin/agy"
-alias agyd="/home/abdul891/.local/bin/agy --dangerously-skip-permissions"
+alias agy="$HOME/.local/bin/agy"
+alias agyd="$HOME/.local/bin/agy --dangerously-skip-permissions"
 
 __agy_profile() {
     local profile_dir="$HOME/.agy-profile-$1"
@@ -237,7 +237,7 @@ EOF
         bash -lc '
             printf "" | gnome-keyring-daemon --unlock --components=secrets >/dev/null 2>&1 ||
                 gnome-keyring-daemon --start --components=secrets >/dev/null 2>&1
-            exec /home/abdul891/.local/bin/agy "$@"
+            exec "$ORIG_HOME/.local/bin/agy" "$@"
         ' agy-profile "$@"
 }
 

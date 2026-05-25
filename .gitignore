@@ -7,3 +7,4 @@ waybar/.config/waybar/before/
 *.backup.*
 *~
 .DS_Store
+.antigravitycli/
