@@ -5,6 +5,8 @@ User configuration managed with GNU Stow.
 ## Packages
 
 - `bash` -> `~/.bashrc`
+- `zsh` -> `~/.zshrc`
+- `tmux` -> `~/.config/tmux`
 - `ghostty` -> `~/.config/ghostty`
 - `hypr` -> `~/.config/hypr`
 - `mako` -> `~/.config/mako`
@@ -26,7 +28,7 @@ The setup script backs up existing config targets before applying Stow links.
 To relink manually after changes:
 
 ```bash
-stow -R -t "$HOME" bash ghostty hypr mako nvim starship waybar yazi
+stow -R -t "$HOME" bash zsh tmux ghostty hypr mako nvim starship waybar yazi
 ```
 
 ## Install Packages

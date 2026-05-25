@@ -7,6 +7,8 @@ BACKUP_DIR="$BACKUP_ROOT/$(date +%Y%m%d-%H%M%S)"
 
 PACKAGES=(
   bash
+  zsh
+  tmux
   ghostty
   hypr
   mako
@@ -18,6 +20,8 @@ PACKAGES=(
 
 TARGETS=(
   "$HOME/.bashrc"
+  "$HOME/.zshrc"
+  "$HOME/.config/tmux"
   "$HOME/.config/ghostty"
   "$HOME/.config/hypr"
   "$HOME/.config/mako"
