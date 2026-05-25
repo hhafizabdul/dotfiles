@@ -1,0 +1,8 @@
+.last-backup-path
+hypr/.config/hypr/monitors.conf
+*.bak
+*.bak.*
+*.backup
+*.backup.*
+*~
+.DS_Store

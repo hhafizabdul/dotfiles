@@ -1,0 +1,12 @@
+[[mgr.prepend_keymap]]
+on = ["c", "y"]
+run = [ 
+  'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "escape --select"
+]
+desc = "Copy to Clipboard"
+
+[[mgr.prepend_keymap]]
+on = ["c", "z"]
+run  = ['shell "zip -r .zip ${@##*/}" --cursor=7 --interactive' , "escape --select"]
+desc = "Zip selected files (or hovered) with name prompt"
+
