@@ -9,6 +9,8 @@ User configuration managed with GNU Stow.
 - `hypr` -> `~/.config/hypr`
 - `mako` -> `~/.config/mako`
 - `nvim` -> `~/.config/nvim`
+- `starship` -> `~/.config/starship.toml`
+- `waybar` -> `~/.config/waybar`
 - `yazi` -> `~/.config/yazi`
 
 ## Apply
@@ -24,7 +26,7 @@ The setup script backs up existing config targets before applying Stow links.
 To relink manually after changes:
 
 ```bash
-stow -R -t "$HOME" bash ghostty hypr mako nvim yazi
+stow -R -t "$HOME" bash ghostty hypr mako nvim starship waybar yazi
 ```
 
 ## Install Packages

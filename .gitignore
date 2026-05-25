@@ -1,5 +1,6 @@
 .last-backup-path
 hypr/.config/hypr/monitors.conf
+waybar/.config/waybar/before/
 *.bak
 *.bak.*
 *.backup

@@ -11,6 +11,8 @@ PACKAGES=(
   hypr
   mako
   nvim
+  starship
+  waybar
   yazi
 )
 
@@ -20,6 +22,8 @@ TARGETS=(
   "$HOME/.config/hypr"
   "$HOME/.config/mako"
   "$HOME/.config/nvim"
+  "$HOME/.config/starship.toml"
+  "$HOME/.config/waybar"
   "$HOME/.config/yazi"
 )
 
