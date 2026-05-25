@@ -25,6 +25,15 @@ To relink after changes:
 stow -R -t "$HOME" bash ghostty hypr mako nvim yazi
 ```
 
+## Install Packages
+
+Package installers live in `install-packages/`.
+
+```bash
+cd install-packages
+./install-all.sh
+```
+
 ## Notes
 
 - These are user configs only.
