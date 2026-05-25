@@ -16,10 +16,12 @@ User configuration managed with GNU Stow.
 From this directory:
 
 ```bash
-stow -t "$HOME" bash ghostty hypr mako nvim yazi
+./setup-configs.sh
 ```
 
-To relink after changes:
+The setup script backs up existing config targets before applying Stow links.
+
+To relink manually after changes:
 
 ```bash
 stow -R -t "$HOME" bash ghostty hypr mako nvim yazi
