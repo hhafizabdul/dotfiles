@@ -48,8 +48,17 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# fnm (Node version manager)
-eval "$(fnm env --use-on-cd)"
+# fnm is disabled; mise owns Node version switching.
+# eval "$(fnm env --use-on-cd)"
+
+# Remove stale Node manager paths before activating mise.
+PATH="$(printf '%s' "$PATH" | tr ':' '\n' | grep -Ev "^$HOME/\\.local/share/mise/installs/node/.*/bin$|^/run/user/.*/fnm_multishells/.*/bin$" | paste -sd: -)"
+export PATH
+
+# mise
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate bash)"
+fi
 
 # ── Antigravity GUI launchers ─────────────────────────────────────────────────
 

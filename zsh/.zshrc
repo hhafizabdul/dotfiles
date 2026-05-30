@@ -137,10 +137,18 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# fnm (Node version manager)
-if command -v fnm >/dev/null 2>&1; then
-  eval "$(fnm env --use-on-cd --shell zsh)"
-fi
+# fnm is disabled; mise owns Node version switching.
+# if command -v fnm >/dev/null 2>&1; then
+#   eval "$(fnm env --use-on-cd --shell zsh)"
+# fi
+
+# Remove any fnm hook/env/path that may have been loaded earlier.
+autoload -U add-zsh-hook
+add-zsh-hook -D chpwd _fnm_autoload_hook 2>/dev/null || true
+unfunction _fnm_autoload_hook 2>/dev/null || true
+unset FNM_MULTISHELL_PATH FNM_VERSION_FILE_STRATEGY FNM_DIR FNM_LOGLEVEL FNM_NODE_DIST_MIRROR FNM_COREPACK_ENABLED FNM_RESOLVE_ENGINES FNM_ARCH
+path=("${(@)path:#$HOME/.local/share/mise/installs/node/*/bin}")
+path=("${(@)path:#/run/user/*/fnm_multishells/*/bin}")
 
 # mise
 if command -v mise >/dev/null 2>&1; then
