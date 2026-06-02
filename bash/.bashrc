@@ -39,7 +39,7 @@ alias cdx2="codex2 --yolo"
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
 
 # Bun
-export PATH="$HOME/.cache/.bun/bin:$PATH"
+export PATH="$HOME/.bun/bin:$HOME/.cache/.bun/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"

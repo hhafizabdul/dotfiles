@@ -4,6 +4,8 @@
 # Keep the system login shell as bash, but let tools started from zsh know the
 # active interactive shell is zsh.
 export SHELL=/usr/bin/zsh
+export EDITOR=nvim
+export VISUAL=nvim
 
 # History
 HISTFILE=~/.histfile
@@ -128,7 +130,7 @@ if [[ "$TERM_PROGRAM" == "kiro" ]] && command -v kiro >/dev/null 2>&1; then
 fi
 
 # Bun
-export PATH="$HOME/.cache/.bun/bin:$PATH"
+export PATH="$HOME/.bun/bin:$HOME/.cache/.bun/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
@@ -378,3 +380,6 @@ fi
 if [[ -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# bun completions
+[ -s "/home/abdul891/.bun/_bun" ] && source "/home/abdul891/.bun/_bun"
