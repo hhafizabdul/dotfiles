@@ -11,6 +11,8 @@ PACKAGES=(
   tmux
   ghostty
   hypr
+  gtk
+  icons
   mako
   nvim
   starship
@@ -24,6 +26,9 @@ TARGETS=(
   "$HOME/.config/tmux"
   "$HOME/.config/ghostty"
   "$HOME/.config/hypr"
+  "$HOME/.config/gtk-3.0"
+  "$HOME/.config/gtk-4.0"
+  "$HOME/.icons/default"
   "$HOME/.config/mako"
   "$HOME/.config/nvim"
   "$HOME/.config/starship.toml"
