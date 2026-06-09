@@ -1,0 +1,143 @@
+# herdr config ported from ~/.config/tmux/tmux.conf
+# Backup of original saved as config.toml.bak.*
+
+onboarding = false
+
+# ──────────────────────────────────────────────────────────
+# General / Behaviour (tmux "General" section equivalents)
+# ──────────────────────────────────────────────────────────
+
+# Mouse support (tmux: set -g mouse on)
+# Configured under [ui]; Herdr 0.6.x no longer documents this at top level.
+
+# Scrollback buffer limit (tmux: set -g history-limit 50000)
+# herdr uses bytes rather than lines; default 10 MB ≈ generous scrollback.
+# Lower slightly to approximate tmux 50k lines if your lines average ~100 bytes.
+# scrollback_limit_bytes = 5000000
+
+
+# tmux renumbers windows automatically; herdr handles this internally.
+# No explicit setting required.
+
+# ──────────────────────────────────────────────────────────
+# Prefix (tmux: set -g prefix C-Space, prefix2 C-b)
+# herdr supports a single prefix only; using C-Space as primary.
+# ──────────────────────────────────────────────────────────
+
+[keys]
+prefix = "ctrl+space"
+
+# Reload config (tmux: bind q source-file ...)
+settings = "prefix+alt+s"
+detach = "prefix+d"
+reload_config = "prefix+q"
+goto = "prefix+alt+g"
+
+# Workspace (Session) controls — tmux equivalents (press prefix, then key)
+new_workspace        = "prefix+shift+c"   # tmux: C (uppercase)
+rename_workspace     = "prefix+shift+r"   # tmux: R (uppercase)
+close_workspace      = "prefix+shift+k"   # tmux: K (uppercase)
+previous_workspace   = "alt+up"   # tmux: P (uppercase)
+next_workspace       = "alt+down"   # tmux: N (uppercase)
+
+# Tab (Window) controls
+new_tab              = "prefix+c"
+rename_tab           = "prefix+r"
+close_tab            = "prefix+k"
+previous_tab         = "alt+left"
+next_tab             = "alt+right"
+
+# Pane controls
+split_vertical       = "prefix+v"         # tmux: v (side-by-side)
+split_horizontal     = "prefix+h"         # tmux: h (stacked)
+close_pane           = "prefix+x"
+focus_pane_left      = "ctrl+alt+left"
+focus_pane_down      = "ctrl+alt+down"
+focus_pane_up        = "ctrl+alt+up"
+focus_pane_right     = "ctrl+alt+right"
+resize_mode          = "prefix+s"         # tmux has no dedicated resize-mode key; mapped to free 's'
+edit_scrollback      = "prefix+e"
+zoom                 = "prefix+z"
+toggle_sidebar       = "prefix+b"
+
+# Direct Alt+1..9 tab switching (tmux M-1..9 select-window)
+[keys.indexed]
+tabs = "alt"
+workspaces = ""
+agents = ""
+
+# ──────────────────────────────────────────────────────────
+# Custom prefix-mode commands (examples)
+# tmux allows arbitrary commands; herdr supports pane or shell commands.
+# Uncomment and adapt as needed.
+[[keys.command]]
+key = "prefix+g"
+type = "pane"
+command = "lazygit"
+
+[[keys.command]]
+key = "prefix+f"
+type = "pane"
+command = "bash -l"
+# ──────────────────────────────────────────────────────────
+
+# ──────────────────────────────────────────────────────────
+# UI / Appearance
+# ──────────────────────────────────────────────────────────
+
+[ui]
+# Sidebar width (tmux doesn't have a sidebar; keeping compact)
+sidebar_width = 26
+mouse_capture = true
+prompt_new_tab_name = false
+
+# Show agent labels in pane borders when no manual name is set
+show_agent_labels_on_pane_borders = true
+
+# Agent panel scope: "current" or "all"
+agent_panel_scope = "all"
+
+# Confirm before closing a workspace (tmux kill-session doesn't confirm)
+confirm_close = false
+
+# ──────────────────────────────────────────────────────────
+# Theme
+# tmux uses blue accent, brightblack borders, top status.
+# herdr uses a sidebar + panels; we keep dracula as base with blue overrides.
+# ──────────────────────────────────────────────────────────
+
+[theme]
+name = "gruvbox"
+
+# [theme.custom]
+# Override accent to tmux-blue instead of dracula pink
+# accent = "#89b4fa"
+
+# ──────────────────────────────────────────────────────────
+# Notifications
+# ──────────────────────────────────────────────────────────
+
+[ui.toast]
+# tmux doesn't pop OS notifications; herdr can use system toasts.
+# Kept from original user config.
+delivery = "system"
+
+# ──────────────────────────────────────────────────────────
+# Sound
+# ──────────────────────────────────────────────────────────
+
+[ui.sound]
+# Disable sound notifications to match tmux silent behaviour.
+enabled = true
+
+# ──────────────────────────────────────────────────────────
+# Experimental / Advanced
+# ──────────────────────────────────────────────────────────
+
+[experimental]
+# Prevent nested herdr launches (conservative default)
+allow_nested = false
+
+[advanced]
+# Retain default 10 MB scrollback limit (see note above to shrink)
+scrollback_limit_bytes = 10000000
