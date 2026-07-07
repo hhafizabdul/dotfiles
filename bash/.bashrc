@@ -195,7 +195,6 @@ ag2kill() { __antigravity_kill_profile "$HOME/.antigravity-profile-2"; }
 
 # ── Antigravity CLI ───────────────────────────────────────────────────────────
 
-alias agy="$HOME/.local/bin/agy"
 alias agyd="$HOME/.local/bin/agy --dangerously-skip-permissions"
 
 __agy_profile() {
@@ -263,3 +262,7 @@ fi
 
 # ── ble.sh attach (must be last) ──────────────────────────────────────────────
 [[ ${BLE_VERSION-} ]] && ble-attach
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/abdul-lapi/.local/bin:$PATH"

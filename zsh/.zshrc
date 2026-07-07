@@ -309,7 +309,6 @@ ag1kill() { __antigravity_kill_profile "$HOME/.antigravity-profile-1"; }
 ag2kill() { __antigravity_kill_profile "$HOME/.antigravity-profile-2"; }
 
 # Antigravity CLI
-alias agy="$HOME/.local/bin/agy"
 alias agyd="$HOME/.local/bin/agy --dangerously-skip-permissions"
 
 __agy_profile() {
@@ -383,3 +382,13 @@ fi
 
 # bun completions
 [ -s "/home/abdul891/.bun/_bun" ] && source "/home/abdul891/.bun/_bun"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/abdul-lapi/.local/bin:$PATH"
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<
