@@ -383,3 +383,9 @@ fi
 
 # bun completions
 [ -s "/home/abdul891/.bun/_bun" ] && source "/home/abdul891/.bun/_bun"
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<

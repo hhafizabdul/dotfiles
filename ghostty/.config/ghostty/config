@@ -33,7 +33,7 @@ keybind = super+control+shift+alt+arrow_left=resize_split:left,100
 keybind = super+control+shift+alt+arrow_right=resize_split:right,100
 
 # Slowdown mouse scrolling
-mouse-scroll-multiplier = 2
+mouse-scroll-multiplier = 3
 keybind = shift+enter=text:\x1b\r
 
 # Fix general slowness on hyprland (https://github.com/ghostty-org/ghostty/discussions/3224)
