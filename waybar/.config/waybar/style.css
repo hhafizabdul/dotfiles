@@ -1,6 +1,7 @@
 @import "../omarchy/current/theme/waybar.css";
 
-@define-color vibrant-bg #2a2a2a;
+@define-color active-accent #e68e0d;
+@define-color dark-yellow-bg #2b1b05;
 
 * {
   color: @foreground;
@@ -24,15 +25,17 @@ window#waybar {
 }
 
 .modules-center {
-  background-color: @background;
+  background-color: @dark-yellow-bg;
   border-radius: 10px;
   padding: 0 4px;
+  border: 1px solid @active-accent;
 }
 
 #workspaces {
-  background-color: @background;
+  background-color: @dark-yellow-bg;
   border-radius: 10px;
   padding: 0 4px;
+  border: 1px solid @active-accent;
 }
 
 #workspaces button {
@@ -54,10 +57,11 @@ window#waybar {
 #custom-omarchy,
 
 #custom-update {
-  background-color: @background;
+  background-color: @dark-yellow-bg;
   border-radius: 10px;
   padding: 0 10px;
   margin: 0 4px;
+  border: 1px solid @active-accent;
 }
 
 #custom-omarchy {
@@ -65,16 +69,18 @@ window#waybar {
 }
 
 #tray {
-  background-color: @background;
+  background-color: @dark-yellow-bg;
   border-radius: 10px;
   padding: 0 8px;
+  border: 1px solid @active-accent;
 }
 
 #custom-expand-icon {
-  background-color: @background;
+  background-color: @dark-yellow-bg;
   border-radius: 10px;
   padding: 0 8px;
   margin-right: 4px;
+  border: 1px solid @active-accent;
 }
 
 #group\/tray-expander {
