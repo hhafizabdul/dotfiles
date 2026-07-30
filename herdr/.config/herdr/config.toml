@@ -125,11 +125,8 @@ prompt_new_tab_name = false
 # Show agent labels in pane borders when no manual name is set
 show_agent_labels_on_pane_borders = true
 
-# Agent panel scope: "current" or "all"
-agent_panel_scope = "all"
-
 # Confirm before closing a workspace (tmux kill-session doesn't confirm)
-confirm_close = false
+confirm_close = true
 
 # ──────────────────────────────────────────────────────────
 # Theme
@@ -140,6 +137,7 @@ confirm_close = false
 agent_panel_sort = "spaces"
 [theme]
 name = "terminal"
+auto_switch = false
 
 # [theme.custom]
 # Override accent to tmux-blue instead of dracula pink
@@ -149,7 +147,6 @@ name = "terminal"
 # Notifications
 # ──────────────────────────────────────────────────────────
 
-auto_switch = false
 [ui.toast]
 # tmux doesn't pop OS notifications; herdr can use system toasts.
 # Kept from original user config.
