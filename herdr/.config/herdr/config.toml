@@ -56,7 +56,7 @@ focus_pane_down      = "ctrl+alt+down"
 focus_pane_up        = "ctrl+alt+up"
 focus_pane_right     = "ctrl+alt+right"
 resize_mode          = "prefix+s"         # tmux has no dedicated resize-mode key; mapped to free 's'
-edit_scrollback      = "prefix+e"
+edit_scrollback      = "prefix+shift+e"
 zoom                 = "prefix+z"
 toggle_sidebar       = "prefix+b"
 
@@ -71,6 +71,12 @@ agents = ""
 # tmux allows arbitrary commands; herdr supports pane or shell commands.
 # Uncomment and adapt as needed.
 [[keys.command]]
+key = "prefix+e"
+type = "shell"
+command = 'uwsm app -- nautilus --new-window "${HERDR_ACTIVE_PANE_CWD:-.}" >/dev/null 2>&1'
+description = "open current directory in file manager"
+
+[[keys.command]]
 key = "prefix+g"
 type = "pane"
 command = "lazygit"
@@ -78,7 +84,32 @@ command = "lazygit"
 [[keys.command]]
 key = "prefix+f"
 type = "pane"
-command = "bash -l"
+command = "zsh -l"
+
+[[keys.command]]
+key = "ctrl+alt+shift+left"
+type = "shell"
+command = "herdr pane resize --direction left --amount 0.05 --current"
+
+[[keys.command]]
+key = "ctrl+alt+shift+right"
+type = "shell"
+command = "herdr pane resize --direction right --amount 0.05 --current"
+
+[[keys.command]]
+key = "ctrl+alt+shift+up"
+type = "shell"
+command = "herdr pane resize --direction up --amount 0.05 --current"
+
+[[keys.command]]
+key = "ctrl+alt+shift+down"
+type = "shell"
+command = "herdr pane resize --direction down --amount 0.05 --current"
+
+[[keys.command]]
+key = "prefix+shift+d"
+type = "shell"
+command = "herdr plugin action invoke open-file-viewer-tab --plugin herdr-file-viewer"
 # ──────────────────────────────────────────────────────────
 
 # ──────────────────────────────────────────────────────────
@@ -94,11 +125,8 @@ prompt_new_tab_name = false
 # Show agent labels in pane borders when no manual name is set
 show_agent_labels_on_pane_borders = true
 
-# Agent panel scope: "current" or "all"
-agent_panel_scope = "all"
-
 # Confirm before closing a workspace (tmux kill-session doesn't confirm)
-confirm_close = false
+confirm_close = true
 
 # ──────────────────────────────────────────────────────────
 # Theme
@@ -106,8 +134,10 @@ confirm_close = false
 # herdr uses a sidebar + panels; we keep dracula as base with blue overrides.
 # ──────────────────────────────────────────────────────────
 
+agent_panel_sort = "spaces"
 [theme]
-name = "gruvbox"
+name = "terminal"
+auto_switch = false
 
 # [theme.custom]
 # Override accent to tmux-blue instead of dracula pink
