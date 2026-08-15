@@ -1,12 +1,12 @@
 -- Change the default Omarchy look'n'feel.
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#general
-hl.config({
-	general = {
-		gaps_in = 3,
-		gaps_out = 3,
-	},
-})
+-- hl.config({
+-- 	general = {
+-- 		gaps_in = 3,
+-- 		gaps_out = 3,
+-- 	},
+-- })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#decoration
 hl.config({
