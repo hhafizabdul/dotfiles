@@ -67,5 +67,15 @@
       ]
     }
   },
-  "plugins": []
+  "plugins": [
+    {
+      "id": "abdul891.notifications"
+    }
+  ],
+  "disabledPlugins": [
+    "omarchy.notifications"
+  ],
+  "cloneSourceRestores": [
+    "abdul891.notifications"
+  ]
 }
