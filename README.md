@@ -12,6 +12,7 @@ User configuration managed with GNU Stow.
 - `hypr` -> `~/.config/hypr`
 - `mako` -> `~/.config/mako`
 - `nvim` -> `~/.config/nvim`
+- `omarchy` -> `~/.config/omarchy/shell.json`, `~/.config/omarchy/shell.toml`
 - `starship` -> `~/.config/starship.toml`
 - `waybar` -> `~/.config/waybar`
 - `yazi` -> `~/.config/yazi`
@@ -29,7 +30,7 @@ The setup script backs up existing config targets before applying Stow links.
 To relink manually after changes:
 
 ```bash
-stow -R -t "$HOME" bash zsh tmux ghostty herdr hypr mako nvim starship waybar yazi
+stow -R -t "$HOME" bash zsh tmux ghostty herdr hypr mako nvim omarchy starship waybar yazi
 ```
 
 ## Install Packages
