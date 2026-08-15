@@ -16,6 +16,7 @@ PACKAGES=(
   icons
   mako
   nvim
+  omarchy
   starship
   waybar
   yazi
@@ -33,6 +34,8 @@ TARGETS=(
   "$HOME/.icons/default"
   "$HOME/.config/mako"
   "$HOME/.config/nvim"
+  "$HOME/.config/omarchy/shell.json"
+  "$HOME/.config/omarchy/shell.toml"
   "$HOME/.config/starship.toml"
   "$HOME/.config/waybar"
   "$HOME/.config/yazi"
