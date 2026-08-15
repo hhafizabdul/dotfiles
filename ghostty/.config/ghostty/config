@@ -1,5 +1,5 @@
 # Dynamic theme colors
-config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
+config-file = ?"~/.local/state/omarchy/current/theme/ghostty.conf"
 command = /usr/bin/zsh -l -i
 # Font
 font-family = "JetBrainsMono Nerd Font"
