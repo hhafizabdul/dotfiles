@@ -167,7 +167,7 @@ enabled = true
 [experimental]
 # Prevent nested herdr launches (conservative default)
 allow_nested = false
-
+kitty_graphics = true
 [advanced]
 # Retain default 10 MB scrollback limit (see note above to shrink)
 scrollback_limit_bytes = 10000000

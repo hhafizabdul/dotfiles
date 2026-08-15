@@ -4,6 +4,7 @@ User configuration managed with GNU Stow.
 
 ## Packages
 
+- `atuin` -> `~/.config/atuin/config.toml`
 - `bash` -> `~/.bashrc`
 - `zsh` -> `~/.zshrc`
 - `tmux` -> `~/.config/tmux`
@@ -30,7 +31,7 @@ The setup script backs up existing config targets before applying Stow links.
 To relink manually after changes:
 
 ```bash
-stow -R -t "$HOME" bash zsh tmux ghostty herdr hypr mako nvim omarchy starship waybar yazi
+stow -R -t "$HOME" atuin bash zsh tmux ghostty herdr hypr mako nvim omarchy starship waybar yazi
 ```
 
 ## Install Packages

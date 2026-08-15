@@ -11,7 +11,7 @@
       "DP-3"
     ],
     "position": "top",
-    "transparent": false,
+    "transparent": true,
     "centerAnchor": "omarchy.clock",
     "layout": {
       "left": [
@@ -45,6 +45,9 @@
       "right": [
         {
           "id": "omarchy.tray"
+        },
+        {
+          "id": "omarchy.tailscale"
         },
         {
           "id": "omarchy.agents"

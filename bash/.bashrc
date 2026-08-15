@@ -263,3 +263,6 @@ fi
 
 # ── ble.sh attach (must be last) ──────────────────────────────────────────────
 [[ ${BLE_VERSION-} ]] && ble-attach
+
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init bash)"
