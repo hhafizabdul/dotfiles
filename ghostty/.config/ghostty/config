@@ -13,6 +13,7 @@ confirm-close-surface=false
 resize-overlay = never
 # background-opacity = 0.5
 
+gtk-single-instance = true
 
 # Cursor styling
 cursor-style = "block"
