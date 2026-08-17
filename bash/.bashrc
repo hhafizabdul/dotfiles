@@ -266,3 +266,6 @@ fi
 
 # Added by Antigravity CLI installer
 export PATH="/home/abdul-lapi/.local/bin:$PATH"
+
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init bash)"

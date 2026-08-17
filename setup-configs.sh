@@ -6,6 +6,7 @@ BACKUP_ROOT="${BACKUP_ROOT:-$HOME/.dotfiles-backups}"
 BACKUP_DIR="$BACKUP_ROOT/$(date +%Y%m%d-%H%M%S)"
 
 PACKAGES=(
+  atuin
   bash
   zsh
   tmux
@@ -23,6 +24,7 @@ PACKAGES=(
 )
 
 TARGETS=(
+  "$HOME/.config/atuin/config.toml"
   "$HOME/.bashrc"
   "$HOME/.zshrc"
   "$HOME/.config/tmux"
