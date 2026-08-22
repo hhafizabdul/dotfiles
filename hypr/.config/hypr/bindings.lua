@@ -24,7 +24,7 @@ local bindings = {
   { "SUPER + SHIFT + M", "YT Music", 'omarchy-launch-or-focus-webapp "YouTube Music" "https://music.youtube.com"' },
   { "SUPER + SHIFT + P", "Perplexity", 'omarchy-launch-or-focus-webapp "Perpleixity" "https://perplexity.ai"' },
   { "SUPER + SHIFT + S", "Smart screenshot to clipboard", "omarchy-capture-screenshot" },
-  { "SUPER + SHIFT + T", "Extract text (OCR) from screenshot", "omarchy-capture-text-extraction" },
+  { "SUPER + SHIFT + T", "Extract text (OCR) from screenshot", "omarchy capture text" },
 }
 
 for _, binding in ipairs(bindings) do
