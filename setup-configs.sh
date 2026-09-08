@@ -11,6 +11,7 @@ PACKAGES=(
   zsh
   tmux
   ghostty
+  foot
   herdr
   hypr
   gtk
@@ -29,6 +30,7 @@ TARGETS=(
   "$HOME/.zshrc"
   "$HOME/.config/tmux"
   "$HOME/.config/ghostty"
+  "$HOME/.config/foot"
   "$HOME/.config/herdr/config.toml"
   "$HOME/.config/hypr"
   "$HOME/.config/gtk-3.0"
